@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>161601 - Roaa Abdalqani Alomari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="https://www.linkedin.com/in/roa%E2%80%99a-alomari-852b92290" target="_blank">Contact Me</a>
+    </div>
+    <hr>
+
+    <div class="GT">
+        <h1>ROAA ALOMARI</h1>
+        <h2>Cyber Security</h2>
+        <h2>About Me</h2>
+        <p>I am a fourth-year Cybersecurity student who is passionate about technology, problem-solving, and digital defense. I enjoy learning about penetration testing, network security, and digital forensics.</p>
+    </div>
+
+    <img src="roaa.jpg" alt="Profile Picture">
+
+    <table class="tab">
+        <thead>
+            <tr>
+                <td>Languages & Tools</td>
+                <td>More Information</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python</td>
+                <td><a href="https://www.python.org/" target="_blank">Python Org</a></td>
+            </tr>
+            <tr>
+                <td>Burp Suite</td>
+                <td><a href="https://portswigger.net/burp" target="_blank">portswigger.net</a></td>
+            </tr>
+            <tr>
+                <td>Metasploit</td>
+                <td><a href="https://metasploit.help.rapid7.com" target="_blank">Metasploit Docs</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr class="ht">
+
+    <p>Contact me at: <a href="mailto:raalomari26@cit.just.edu.jo">raalomari26@cit.just.edu.jo</a></p>
+
+    <section class="future">
+        <h2>Where Do I See Myself in 4 Years?</h2>
+        <p>In four years, I see myself working as a cybersecurity specialist focusing on digital forensics and penetration testing. I aim to be part of an incident response team, protecting organizations from security threats. I also plan to pursue postgraduate studies to deepen my technical knowledge and enhance my career in cybersecurity.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Key Soft Skills</h2>
+        <ul>
+            <li>Teamwork</li>
+            <li>Analytical Thinking</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Adaptability</li>
+        </ul>
+    </section>
+
+    
+    <form id="contactForm">
+        <h2>comment :</h2>
+        <input type="text" id="fullName" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Palestine">Palestine</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea id="comments" rows="4" placeholder="Your Comments"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const fullName = document.getElementById("fullName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const country = document.getElementById("country").value.trim();
+            const comments = document.getElementById("comments").value.trim();
+
+            if (!fullName || !email || !country || !comments) {
+                alert(" Please fill in all fields before submitting!");
+                return;
+            }
+
+            alert(" Form submitted successfully! Thank you, " + fullName + ".");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+</html>
